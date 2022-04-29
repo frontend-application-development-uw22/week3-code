@@ -1,7 +1,7 @@
 class HTMLElement {
     constructor(tag, content) {
         this.tag = tag;
-        this.content = content;
+        this.content = content.toUpperCase();
     }
 
     render() {
@@ -12,8 +12,6 @@ class HTMLElement {
 class DivElement extends HTMLElement {
     constructor(content) {
         super('div', content);
-        // this.tag = 'div';
-        // this.content = content;
     }
 }
 
