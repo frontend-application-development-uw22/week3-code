@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.todo-item {
+  cursor: pointer;
+}
+
+.todo-item-completed {
+  cursor: pointer;
+  text-decoration: line-through;
+}

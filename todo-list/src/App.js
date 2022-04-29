@@ -6,8 +6,6 @@ import TodoListApp from './TodoListApp/TodoListApp';
 function App() {
   return (
     <div>
-      <TodoListApp className="MyApp" />
-      <TodoListApp />
       <TodoListApp />
       {/* this is a comment */}
       {/* <Picture
