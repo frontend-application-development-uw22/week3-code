@@ -1,20 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import TodoItem from './TodoItem';
 
 function TodoListItems({ todoList, toggleCompleted, deleteTodo }) {
     const items = todoList.map((todo, idx) => {
         return (
-            <li
+            <TodoItem
                 key={idx}
-                // style={{
-                //     textDecoration: todo.isCompleted ? 'line-through' : 'initial'
-                // }}
-                className={todo.isCompleted ? 'todo-item-completed' : 'todo-item'}
-            >
-                <span>{todo.text}</span>
-                <button onClick={() => toggleCompleted(idx)}>Completed</button>
-                <button onClick={() => deleteTodo(idx)}>Delete</button>
-            </li>
+                todo={todo}
+                onCompleted={() => toggleCompleted(idx)}
+                onDelete={() => deleteTodo(idx)}
+            />
         );
     });
     return (
